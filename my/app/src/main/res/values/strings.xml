@@ -3,4 +3,9 @@
     <string name="asynctask_demo">更新progressBar</string>
     <string name="gesture_demo">请在下方屏幕中绘制手势~</string>
     <string name="dialog_hint">请填写手势名称：</string>
+    <string name="service_tag1">start service</string>
+    <string name="service_tag2">stop service</string>
+    <string name="bind">bind</string>
+    <string name="cancel">cancel</string>
+    <string name="status">status</string>
 </resources>
