@@ -12,7 +12,7 @@ import android.util.Log;
 
 public class MyService2 extends Service {
     private final String TAG = "test_service2";
-    private int count;
+    private int count = 0;
     private boolean quit;
 
     public class MyBinder extends Binder {
@@ -57,7 +57,7 @@ public class MyService2 extends Service {
     @Override
     public IBinder onBind(Intent intent) {
         Log.i(TAG, "onBind方法被调用");
-        return null;
+        return binder;
     }
 
     @Override
