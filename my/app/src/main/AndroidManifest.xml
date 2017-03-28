@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Service_activity2">
+        <activity android:name=".BroadcastReceiver_demo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,8 +20,10 @@
         </activity>
 
         <!-- 配置Service组件,同时配置一个action -->
-        <service android:name=".MyService2">
-
+        <service android:name=".MyService3">
+            <intent-filter>
+                <action android:name="com.test.intentservice"/>
+            </intent-filter>
         </service>
 
     </application>
