@@ -3,6 +3,7 @@
     package="com.example.dusicong.my">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BroadcastReceiver_demo">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,12 +20,11 @@
             </intent-filter>
         </activity>
 
-        <!-- 配置Service组件,同时配置一个action -->
-        <service android:name=".MyService3">
-            <intent-filter>
-                <action android:name="com.test.intentservice"/>
-            </intent-filter>
-        </service>
+        <activity android:name=".BroadcastReceiver_demo">
+        </activity>
+
+
+
 
     </application>
 

@@ -3,4 +3,10 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="send(模拟别处登录)"
+        android:id="@+id/btn_send"/>
+
 </LinearLayout>

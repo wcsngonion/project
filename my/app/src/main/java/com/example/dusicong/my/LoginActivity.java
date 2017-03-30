@@ -1,5 +1,6 @@
 package com.example.dusicong.my;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -7,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by Du Sicong on 3/28/2017.
@@ -40,10 +42,27 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     @Override
     protected void onStart() {
         super.onStart();
+        if(!pref.getString("user", "").equals("")){
+            edit_user.setText(pref.getString("user", ""));
+            edit_pawd.setText(pref.getString("pawd", ""));
+        }
     }
 
     @Override
     public void onClick(View v) {
-
+        String user = edit_user.getText().toString();
+        String pawd = edit_pawd.getText().toString();
+        if(user.equals("123") && pawd.equals("123")){
+            editor = pref.edit();
+            editor.putString("user", user);
+            editor.putString("pawd", pawd);
+            editor.commit();
+            Intent intent = new Intent(LoginActivity.this, BroadcastReceiver_demo.class);
+            startActivity(intent);
+            Toast.makeText(LoginActivity.this, "bingo", Toast.LENGTH_SHORT).show();
+            finish();
+        }else{
+            Toast.makeText(LoginActivity.this,"这么简单都输错，脑子呢？",Toast.LENGTH_SHORT).show();
+        }
     }
 }
