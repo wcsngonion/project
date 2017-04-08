@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:hr="http://www.wsmo.org/ns/hrests#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:wsl="http://www.wsmo.org/ns/wsmo-lite#">
+<!-- this file is not intended as human-readable; see http://www.wsmo.org/ns/hrests/index.n3 instead -->
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/wsmo-lite#hasOperation">
+		<rdfs:domain>
+			<rdfs:Class rdf:about="http://www.wsmo.org/ns/wsmo-lite#Service" />
+		</rdfs:domain>
+		<rdfs:range>
+			<rdfs:Class rdf:about="http://www.wsmo.org/ns/wsmo-lite#Operation" />
+		</rdfs:range>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/wsmo-lite#hasInputMessage">
+		<rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation" />
+		<rdfs:range>
+			<rdfs:Class rdf:about="http://www.wsmo.org/ns/wsmo-lite#Message" />
+		</rdfs:range>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/wsmo-lite#hasOutputMessage">
+		<rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation" />
+		<rdfs:range rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Message" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/hrests#hasAddress">
+		<rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation" />
+		<rdfs:range>
+			<rdfs:Datatype rdf:about="http://www.wsmo.org/ns/hrests#URITemplate" />
+		</rdfs:range>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/hrests#hasMethod">
+		<rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation" />
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+	</rdf:Property>
+</rdf:RDF>
